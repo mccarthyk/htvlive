@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>HTV Live</title>
+
+  <link rel="stylesheet" href="https://commbocc.github.io/html-wrapper/static/css/app.css">
+
+  <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet">
+  <script src="//vjs.zencdn.net/5.19/video.min.js"></script>
+  <script src="js/videojs.hls.min.js"></script>
+</head>
+<body class="bg-white">
+  <div id="hc-main">
+
+    <!-- https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/G1 -->
+    <nav is="hc-navigation" logo-href="http://hcflgov.net" skip-content-link="#main-content"></nav>
+
+    <ol is="hc-banner" title="HTV Live">
+      <!-- ancestors -->
+      <li class="breadcrumb-item"><a href="http://hcflgov.net">Home</a></li>
+    </ol>
+
+    <div id="main-content" class="py-5">
+      <div class="container">
+
+        <div class="embed-responsive embed-responsive-16by9">
+          <video id="htvlive-video" class="embed-responsive-item video-js vjs-default-skin" poster="imgs/govwebcastposter.jpg" controls autoplay>
+            <source src="http://65.49.32.146:8080/HTVLive24/myStream/playlist.m3u8" type="application/x-mpegURL" />
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+          </video>
+        </div>
+
+        <div class="text-center my-3">
+          <a href="http://www.govwebcast.com" target="_blank" class="hide-external-indicator">
+            <img src="imgs/powered_logo.png" width="160" height="66" border="0">
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- <footer is="hc-footer"></footer> -->
+
+  </div>
+
+  <script type="text/javascript" src="https://commbocc.github.io/html-wrapper/static/js/manifest.js"></script>
+  <script type="text/javascript" src="https://commbocc.github.io/html-wrapper/static/js/vendor.js"></script>
+  <script type="text/javascript" src="https://commbocc.github.io/html-wrapper/static/js/app.js"></script>
+
+  <script>
+  var player = videojs('htvlive-video');
+  player.play();
+  </script>
+</body>
+</html>
